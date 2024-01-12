@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="root" prefHeight="668.0" prefWidth="1313.0" style="-fx-background-color: #FFEED9;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.controller.DashboardControllerFormController">
+   <children>
+      <JFXButton buttonType="RAISED" layoutY="13.0" prefHeight="93.0" prefWidth="297.0" text="DASHBOARD">
+         <font>
+            <Font name="Algerian" size="40.0" />
+         </font>
+      </JFXButton>
+      <AnchorPane fx:id="changePain" layoutX="319.0" layoutY="-6.0" prefHeight="655.0" prefWidth="960.0" style="-fx-background-color: #FECDA6;">
+         <children>
+            <ImageView fx:id="D" fitHeight="673.0" fitWidth="1015.0" layoutX="1.0" layoutY="5.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/abstract-blur-hospital-clinic-interior.jpg" />
+               </image>
+            </ImageView>
+
+            <Label layoutX="67.0" layoutY="31.0" prefHeight="66.0" prefWidth="299.0" text="Welcome.....">
+               <font>
+                  <Font name="Lucida Handwriting Italic" size="42.0" />
+               </font>
+            </Label>
+
+            <Label layoutX="589.0" layoutY="6.0" prefHeight="72.0" prefWidth="223.0" text="MEDHELP MEDICAL CENTER" textAlignment="CENTER" textFill="#555443">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </Label>
+            <Label layoutX="631.0" layoutY="54.0" text="Your Health is Our happiness.....">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <ImageView fitHeight="101.0" fitWidth="149.0" layoutX="831.0" layoutY="17.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/logo.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="328.0" fitWidth="492.0" layoutX="347.0" layoutY="120.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/A-bar-chart-illustrating-the-number-of-patients-in-each-decade-of-life-treated-by-the-removebg-preview.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="235.0" fitWidth="348.0" layoutX="29.0" layoutY="155.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/Pie-chart-showing-percent-of-drugs-manufactured-by-top-10-manufacturers-in-the-sample-removebg-preview.png" />
+               </image>
+            </ImageView>
+            <Label fx:id="lblTime" layoutX="299.0" layoutY="20.0" prefHeight="21.0" prefWidth="246.0" text="Clock">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </Label>
+            <Label layoutX="66.0" layoutY="550.0" prefHeight="50.0" prefWidth="217.0" text="Medicine Count" textFill="#331e1e">
+               <font>
+                  <Font name="System Bold" size="28.0" />
+               </font>
+            </Label>
+            <Label fx:id="txtMedicineCount" layoutX="121.0" layoutY="593.0" text="Label">
+               <font>
+                  <Font name="System Bold" size="20.0" />
+               </font>
+            </Label>
+            <ImageView fitHeight="103.0" fitWidth="111.0" layoutX="100.0" layoutY="446.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/giphy medicine.gif" />
+               </image>
+            </ImageView>
+            <Label layoutX="335.0" layoutY="551.0" prefHeight="50.0" prefWidth="217.0" text="Patient Count" textFill="#7b5050">
+               <font>
+                  <Font name="System Bold" size="28.0" />
+               </font>
+            </Label>
+            <ImageView fitHeight="100.0" fitWidth="108.0" layoutX="362.0" layoutY="452.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/patient.png" />
+               </image>
+            </ImageView>
+            <Label fx:id="txtPatientsCount" layoutX="381.0" layoutY="593.0" text="Label">
+               <font>
+                  <Font name="System Bold" size="20.0" />
+               </font>
+            </Label>
+            <ImageView fitHeight="108.0" fitWidth="108.0" layoutX="616.0" layoutY="447.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/mental-health-wellbeing.gif" />
+               </image>
+            </ImageView>
+            <Label layoutX="555.0" layoutY="551.0" prefHeight="50.0" prefWidth="261.0" text="Prescription Count" textFill="#7b5050">
+               <font>
+                  <Font name="System Bold" size="28.0" />
+               </font>
+            </Label>
+            <Label fx:id="txtprescripcount" layoutX="644.0" layoutY="590.0" text="Label">
+               <font>
+                  <Font name="System Bold" size="20.0" />
+               </font>
+            </Label>
+
+         </children></AnchorPane>
+      <JFXButton buttonType="RAISED" layoutX="10.0" layoutY="98.0" onAction="#patientOnAction" prefHeight="60.0" prefWidth="293.0" style="-fx-background-color: #E1C78F;" text="Patient">
+         <font>
+            <Font name="Cooper Black" size="24.0" />
+         </font>
+      </JFXButton>
+      <JFXButton buttonType="RAISED" layoutX="11.0" layoutY="177.0" onAction="#medicineOnAction" prefHeight="70.0" prefWidth="291.0" style="-fx-background-color: E1C78F;" text="Medicine">
+         <font>
+            <Font name="Cooper Black" size="24.0" />
+         </font>
+      </JFXButton>
+      <ImageView fitHeight="38.0" fitWidth="54.0" layoutX="35.0" layoutY="109.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/patient.png" />
+         </image>
+      </ImageView>
+
+      <Button layoutX="4.0" layoutY="333.0" mnemonicParsing="false" onAction="#prescriptionOnaction" prefHeight="64.0" prefWidth="301.0" style="-fx-background-color: E1C78F;" text="Prescription">
+         <font>
+            <Font name="Cooper Black" size="24.0" />
+         </font>
+      </Button>
+      <Button layoutX="71.0" layoutY="581.0" mnemonicParsing="false" onAction="#signoutOnAction" prefHeight="43.0" prefWidth="128.0" style="-fx-background-color: #00A9FF;" text="SIGN OUT">
+         <font>
+            <Font name="System Bold" size="19.0" />
+         </font>
+      </Button>
+      <Button layoutX="5.0" layoutY="259.0" mnemonicParsing="false" onAction="#doctorOnAction" prefHeight="59.0" prefWidth="299.0" style="-fx-background-color: E1C78F;" text="Doctor">
+         <font>
+            <Font name="Cooper Black" size="24.0" />
+         </font>
+      </Button>
+      <ImageView fitHeight="58.0" fitWidth="47.0" layoutX="15.0" layoutY="342.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/medical-prescription.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="59.0" fitWidth="42.0" layoutX="22.0" layoutY="268.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/online.png" />
+         </image>
+      </ImageView>
+      <JFXButton layoutX="4.0" layoutY="416.0" onAction="#OrdersOnAction" prefHeight="65.0" prefWidth="302.0" style="-fx-background-color: E1C78F;" text="Orders">
+         <font>
+            <Font name="Cooper Black" size="24.0" />
+         </font>
+      </JFXButton>
+      <ImageView fitHeight="57.0" fitWidth="61.0" layoutX="26.0" layoutY="184.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/medicine.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="63.0" fitWidth="67.0" layoutX="20.0" layoutY="417.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/management.png" />
+         </image>
+      </ImageView>
+   </children>
+</AnchorPane>

@@ -1,0 +1,91 @@
+drop database medical;
+
+create database medical;
+use medical;
+
+create table user (
+    user_name varchar(50) primary key,
+    password varchar(20) not null
+);
+
+create table supplier (
+    supplier_id varchar(10) primary key,
+    name varchar(20),
+    tel int(11),
+    email varchar(30)
+);
+
+create table medicine (
+    medicine_id varchar(10) primary key,
+    name varchar(20),
+    type varchar(10),
+    quantity int(10),
+    price decimal(6,2)
+);
+
+create table med_sup_details (
+    medicine_id varchar(10),
+    sup_id varchar(10),
+    constraint foreign key (sup_id) references supplier (supplier_id)
+    on update cascade on delete cascade,
+    constraint foreign key (medicine_id) references medicine (medicine_id)
+    on update cascade on delete cascade
+);
+
+create table customer (
+    cus_id varchar(10) primary key,
+    name varchar(20),
+    email varchar(30),
+    address varchar(50),
+    tel int(11)
+);
+
+create table prescription (
+    pres_id varchar(10) primary key,
+    date date,
+    description varchar(50),
+    cust_id varchar(10),
+    constraint foreign key (cust_id) references customer (cus_id)
+    on update cascade on delete cascade
+);
+
+create table orders (
+    order_id varchar(10) primary key,
+    date date,
+    pres_id varchar(10),
+    total_price decimal(9,2),
+    constraint foreign key(pres_id)references prescription(pres_id)on update cascade on delete cascade
+);
+
+create table order_details (
+    order_id varchar(10),
+    medicine_id varchar(10),
+    qty int(6),
+    unit_price decimal(9,2),
+    total decimal(9,2),
+    constraint foreign key (order_id) references orders (order_id)
+    on update cascade on delete cascade,
+    constraint foreign key (medicine_id) references medicine (medicine_id)
+    on update cascade on delete cascade
+);
+
+create table bill (
+    bill_id varchar(10) primary key,
+    date date,
+    total decimal(6,2),
+    cus_id varchar(10),
+    order_id varchar(10),
+    constraint foreign key (cus_id) references customer (cus_id)
+    on update cascade on delete cascade,
+    constraint foreign key (order_id) references orders (order_id)
+    on update cascade on delete cascade
+);
+
+create table doctor(
+    doc_id      varchar(10)     primary key,
+    name        varchar(20)     not null,
+    email       varchar(30)     not null,
+    contact_no  int(11)    not null
+);
+
+
